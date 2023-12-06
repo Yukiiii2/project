@@ -71,6 +71,7 @@ body{
     height: 40px;
     padding-left: 5px;
     display: block;
+    margin-top: 5px;
     margin-right: auto;
     margin-left: auto;
     border: 2px solid #E0115F;
