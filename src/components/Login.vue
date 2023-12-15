@@ -11,7 +11,8 @@
                 <input type="password" size="large" placeholder="PASSWORD" required/>
             </div>
 
-                <button><router-link to="/Page1">LOGIN</router-link></button>
+                <Button @click="newScreen('/navbar')">LOGIN</Button>
+                    
             
             <div class="link">
                 <a href="">Forgot Password</a>
@@ -24,28 +25,31 @@
                 <img src="../assets/logo.png" alt="">
             </div>
 
+/*    background-image: url("../assets/bg.jpg"); */
 </template>
 
-<script>
-
-
-export default{
-    name : 'Login'
-}
-
+<script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const newScreen = (nscr) => {
+    router.push(nscr)
+};
 
 </script>
 
 <style>
-
+html {
+    height: 100%;
+    width: 100%
+}
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
 }
+
 body{
-    background-image: url("../assets/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -71,7 +75,6 @@ body{
     height: 40px;
     padding-left: 5px;
     display: block;
-    margin-top: 5px;
     margin-right: auto;
     margin-left: auto;
     border: 2px solid #E0115F;

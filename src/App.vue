@@ -1,10 +1,17 @@
 <script setup>
-import Login from './components/Login.vue'
-import Page1 from './components/Page1.vue'
+import { onBeforeMount } from 'vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+onBeforeMount(() => 
+    {router.push('/Login')}
+);
 </script>
 
 <template>
-<Login/>
+    <div>
+        <router-view></router-view>  
+    </div>
 </template>
 
 <style>
